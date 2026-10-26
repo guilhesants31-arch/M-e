@@ -1,0 +1,175 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ffdde8, #fff0d9, #f7c5e0);
+    overflow-x: hidden;
+    color: #713b55;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 40px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px solid #fff;
+    border-radius: 28px;
+    box-shadow: 0 15px 50px rgba(150, 65, 100, 0.2);
+    animation: appear 1.2s ease;
+    z-index: 1;
+}
+
+.cake {
+    font-size: 75px;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+.subtitle {
+    font-family: Arial, sans-serif;
+    letter-spacing: 4px;
+    font-size: 11px;
+    color: #c05b88;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(30px, 6vw, 44px);
+    color: #b63d70;
+    margin-bottom: 20px;
+}
+
+.intro {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.divider {
+    margin: 25px 0;
+    color: #dc80a7;
+    font-size: 25px;
+}
+
+.message {
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: left;
+}
+
+.message strong {
+    color: #b63d70;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #e85d94, #b83d78);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(184, 61, 120, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(184, 61, 120, 0.35);
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise {
+    margin-top: 30px;
+    padding: 25px;
+    background: #fff0f6;
+    border-radius: 20px;
+    animation: appear 0.8s ease;
+}
+
+#surprise h2 {
+    color: #b63d70;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#surprise p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.flowers {
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.signature {
+    margin-top: 30px;
+    font-size: 17px;
+    font-style: italic;
+    color: #b63d70;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 30px 22px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+}
